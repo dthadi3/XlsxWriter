@@ -19,6 +19,12 @@ python:
   - "nightly"
   - "pypy"
   - "pypy3"
+jobs:
+  exclude:
+    - python: "pypy"
+      arch: ppc64le
+    - python: "pypy3"
+      arch: ppc64le
 
 install:
 - pip install pytest
